@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #1b1b1b; /* Fondo gris oscuro */
+    color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    background: #242424; /* Fondo gris para el contenedor */
+    border-radius: 15px;
+    padding: 20px 30px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  }
+  
+  .header {
+    margin-bottom: 20px;
+  }
+  
+  .header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #8ab4f8; /* Azul claro */
+    text-transform: uppercase;
+  }
+  
+  .display {
+    margin: 20px 0;
+  }
+  
+  .display p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #d1d1d1; /* Texto más claro */
+  }
+  
+  .number-display {
+    font-size: 48px;
+    font-weight: bold;
+    color: #66bb6a; /* Verde suave */
+    margin: 10px 0;
+    text-shadow: 0 3px 6px rgba(102, 187, 106, 0.4);
+  }
+  
+  .name-display {
+    font-size: 24px;
+    color: #f0f0f0;
+  }
+  
+  .input-name {
+    margin: 15px 0;
+  }
+  
+  .input-name input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+  }
+  
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .buttons button {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #f0f0f0;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+  }
+  
+  .buttons button:hover {
+    transform: translateY(-3px);
+  }
+  
+  .btn-ticket {
+    background: #3949ab; /* Azul sobrio */
+  }
+  
+  .btn-ticket:hover {
+    background: #283593; /* Azul más oscuro */
+  }
+  
+  .btn-next {
+    background: #66bb6a; /* Verde suave */
+  }
+  
+  .btn-next:hover {
+    background: #388e3c; /* Verde más oscuro */
+  }
+  
+  .footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #8d8d8d;
+  }
+  
+  .footer a {
+    color: #8ab4f8;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  

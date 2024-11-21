@@ -1,0 +1,14 @@
+{
+    "name": "ticketing-system",
+    "version": "1.0.0",
+    "description": "A virtual ticketing system where users can enter their name and get a ticket number.",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "express": "^4.18.2",
+      "body-parser": "^1.20.2"
+    }
+  }
+  
