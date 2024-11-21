@@ -7,7 +7,6 @@ let currentNumber = 0;
 let nextTicketNumber = 1;
 let ticketQueue = {};
 
-app.use(express.static('public'));
 app.use(bodyParser.json());
 
 // Ruta para servir el archivo index.html
