@@ -3,19 +3,19 @@ const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
 
-let currentNumber = 0; // Number currently being served
-let nextTicketNumber = 1; // Next available ticket number
-let ticketQueue = {}; // Map of ticket numbers to user names
+let currentNumber = 0;
+let nextTicketNumber = 1;
+let ticketQueue = {};
 
 app.use(express.static('public'));
 app.use(bodyParser.json());
 
-// Serve the index.html file
+// Ruta para servir el archivo index.html
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// Endpoint to get a new ticket
+// Endpoint para obtener un nuevo ticket
 app.post('/getTicket', (req, res) => {
   const userName = req.body.name.trim();
 
@@ -30,7 +30,7 @@ app.post('/getTicket', (req, res) => {
   res.json({ ticketNumber });
 });
 
-// Endpoint to serve the next ticket
+// Endpoint para atender el siguiente ticket
 app.post('/nextTicket', (req, res) => {
   if (currentNumber < nextTicketNumber - 1) {
     currentNumber++;
@@ -41,13 +41,10 @@ app.post('/nextTicket', (req, res) => {
   }
 });
 
-// Endpoint to get the current number and name
+// Endpoint para obtener el número y nombre actuales
 app.get('/current', (req, res) => {
   const currentName = ticketQueue[currentNumber] || '-';
   res.json({ currentNumber, currentName });
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Servidor corriendo en el puerto ${PORT}`);
-});
+module.exports = app;
